@@ -6,10 +6,6 @@ import com.bins.domain.repo.UserRepo
 import kotlinx.coroutines.channels.ReceiveChannel
 import kotlin.coroutines.CoroutineContext
 
-/**
- * It will first get articles from the local database and also update it with the latest
- * articles from remote
- */
 class UserInfoUseCase(private val coroutineContext: CoroutineContext,
                       private val repositories: UserRepo) : BaseUseCase<UserResponseEntity>(coroutineContext) {
 

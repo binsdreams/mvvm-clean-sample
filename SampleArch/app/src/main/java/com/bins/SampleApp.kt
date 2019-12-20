@@ -1,10 +1,7 @@
 package com.bins
 
 import android.app.Application
-import com.bins.presentation.di.mLocalModules
-import com.bins.presentation.di.mNetworkModules
-import com.bins.presentation.di.mRepositoryModules
-import com.bins.presentation.di.mUseCaseModules
+import com.bins.presentation.di.*
 import org.koin.android.ext.android.startKoin
 
 class SampleApp : Application() {
@@ -18,6 +15,7 @@ class SampleApp : Application() {
         startKoin(this,
             listOf(
                 mNetworkModules,
+                mViewModels,
                 mRepositoryModules,
                 mUseCaseModules,
                 mLocalModules)
